@@ -54,7 +54,7 @@ public class FrameworkORM implements ORMInterface<Framework>
         l.setLanguage(results.getString("Language"));
         
         fes_ws.setId(results.getInt("Front_End_Server_Web_Serverid"));
-        fes_ws.setFes_WS("FES_WS");
+        fes_ws.setFes_WS(results.getString("FES_WS"));
 
 
         

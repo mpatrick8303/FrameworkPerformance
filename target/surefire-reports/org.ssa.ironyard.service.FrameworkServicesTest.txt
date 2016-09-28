@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: org.ssa.ironyard.service.FrameworkServicesTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.02 sec <<< FAILURE! - in org.ssa.ironyard.service.FrameworkServicesTest
+testDisplayFramework(org.ssa.ironyard.service.FrameworkServicesTest)  Time elapsed: 0.02 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at org.ssa.ironyard.service.FrameworkServicesTest.testDisplayFramework(FrameworkServicesTest.java:79)
+

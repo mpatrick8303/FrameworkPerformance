@@ -17,7 +17,7 @@ public class FES_WSDAOTest
     FES_WSDAOInt fes;
     MysqlDataSource mysqlDataSource = new MysqlDataSource();
     
-    @Before
+    //@Before
     public void setup()
     {
         mysqlDataSource.setUrl(URL);

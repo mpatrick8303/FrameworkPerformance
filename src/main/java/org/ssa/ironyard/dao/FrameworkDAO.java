@@ -36,6 +36,7 @@ public class FrameworkDAO extends AbstractDAO<Framework> implements FrameworkDAO
     @Override
     public Framework insert(Framework framework)
     {
+        System.out.println(framework.getFramework());
         Framework f = null;
         Framework fUse = framework;
         Connection connection = null;
@@ -44,7 +45,7 @@ public class FrameworkDAO extends AbstractDAO<Framework> implements FrameworkDAO
         LanguagesDAO lD = new LanguagesDAO(datasource);
         FES_WSDAO fD = new FES_WSDAO(datasource);
         
-        System.out.println(fUse.getLanguage().getID());
+        
         
         if(fUse.getLanguage().getID() == null)
         {

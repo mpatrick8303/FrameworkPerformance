@@ -7,16 +7,19 @@ import java.sql.SQLException;
 
 import javax.sql.DataSource;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.ssa.ironyard.ORM.LanguageORM;
 import org.ssa.ironyard.ORM.ORMInterface;
 import org.ssa.ironyard.model.Languages;
 
 import com.mysql.cj.api.jdbc.Statement;
 
+@Component
 public class LanguagesDAO extends AbstractDAO<Languages> implements LanguageDAOInt
 {
-
-    protected LanguagesDAO(DataSource datasource)
+    @Autowired
+    public LanguagesDAO(DataSource datasource)
     {
         super(datasource, new LanguageORM(){});
     }
@@ -34,6 +37,7 @@ public class LanguagesDAO extends AbstractDAO<Languages> implements LanguageDAOI
             connection = datasource.getConnection();
             insertStatement = connection.prepareStatement(orm.prepareInsert(),Statement.RETURN_GENERATED_KEYS);
             insertStatement.setString(1, language.getLanguage());
+         
             
             if(insertStatement.executeUpdate() > 0)
             {

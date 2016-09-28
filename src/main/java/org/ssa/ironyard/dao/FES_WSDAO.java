@@ -7,6 +7,8 @@ import java.sql.SQLException;
 
 import javax.sql.DataSource;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.ssa.ironyard.ORM.FES_WSORM;
 import org.ssa.ironyard.ORM.ORMInterface;
 import org.ssa.ironyard.model.FrontEndServer_WebServer;
@@ -14,10 +16,11 @@ import org.ssa.ironyard.model.Languages;
 
 import com.mysql.cj.api.jdbc.Statement;
 
+@Component
 public class FES_WSDAO extends AbstractDAO<FrontEndServer_WebServer> implements FES_WSDAOInt
 {
-
-    protected FES_WSDAO(DataSource datasource)
+    @Autowired
+    public FES_WSDAO(DataSource datasource)
     {
         super(datasource, new FES_WSORM(){});
     }

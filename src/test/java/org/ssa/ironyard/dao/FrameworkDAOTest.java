@@ -22,7 +22,7 @@ public class FrameworkDAOTest
     FES_WSDAOInt fes;
     MysqlDataSource mysqlDataSource = new MysqlDataSource();
     
-    @Before
+    //@Before
     public void setup()
     {
         mysqlDataSource.setUrl(URL);
@@ -59,7 +59,7 @@ public class FrameworkDAOTest
         
     }
     
-    @Test
+    //@Test
     public void testFrameInsertIncluded()
     {
         Languages l = lan.insert(java);

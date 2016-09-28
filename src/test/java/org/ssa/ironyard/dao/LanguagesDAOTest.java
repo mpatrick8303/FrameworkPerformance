@@ -16,7 +16,7 @@ public class LanguagesDAOTest
     LanguageDAOInt lan;
     MysqlDataSource mysqlDataSource = new MysqlDataSource();
     
-    @Before
+    //@Before
     public void setup()
     {
         mysqlDataSource.setUrl(URL);

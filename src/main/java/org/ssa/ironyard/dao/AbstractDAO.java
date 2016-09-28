@@ -59,7 +59,6 @@ public abstract class AbstractDAO<T extends DomainObject>
         {
             connection = this.datasource.getConnection();
             clear = connection.createStatement();
-            System.out.println(this.orm.table());
             return clear.executeUpdate("DELETE FROM " + this.orm.table() + ";");
         }
         catch (SQLException e)

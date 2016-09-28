@@ -8,4 +8,6 @@ public interface FrameworkServicesInt
 {
     void setupDatabase();
     Framework insertFramework(Framework framework);
+    List<Framework> displayFrameworks();
+    Framework displayFramework(int id);
 }
