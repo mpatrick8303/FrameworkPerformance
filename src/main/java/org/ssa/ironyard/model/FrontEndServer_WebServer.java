@@ -34,6 +34,19 @@ public class FrontEndServer_WebServer implements DomainObject
         this.fes_WS = fes_WS;
     }
     
+    public Object clone()
+    {
+    
+            try
+            {
+                return super.clone();
+            }
+            catch (CloneNotSupportedException e)
+            {
+                return null;
+            }
+       
+    }
     
     
     @Override
@@ -41,11 +54,9 @@ public class FrontEndServer_WebServer implements DomainObject
     {
         final int prime = 31;
         int result = 1;
-        result = prime * result + ((fes_WS == null) ? 0 : fes_WS.hashCode());
         result = prime * result + ((id == null) ? 0 : id.hashCode());
         return result;
     }
-    
     @Override
     public boolean equals(Object obj)
     {
@@ -65,7 +76,7 @@ public class FrontEndServer_WebServer implements DomainObject
             return false;
         return true;
     }
-    public boolean deeplyEquals(Object obj)
+    public boolean deeplyEquals(DomainObject obj)
     {
         if (this == obj)
             return true;

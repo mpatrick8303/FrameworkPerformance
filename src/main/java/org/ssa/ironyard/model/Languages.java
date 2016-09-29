@@ -45,16 +45,30 @@ public class Languages implements DomainObject
 
 
     
+    public Object clone()
+    {
     
+            try
+            {
+                return super.clone();
+            }
+            catch (CloneNotSupportedException e)
+            {
+                return null;
+            }
+       
+    }
 
   
+    
+
+
     @Override
     public int hashCode()
     {
         final int prime = 31;
         int result = 1;
         result = prime * result + ((ID == null) ? 0 : ID.hashCode());
-        result = prime * result + ((language == null) ? 0 : language.hashCode());
         return result;
     }
 
@@ -69,18 +83,18 @@ public class Languages implements DomainObject
         if (getClass() != obj.getClass())
             return false;
         Languages other = (Languages) obj;
-        if (language == null)
+        if (ID == null)
         {
-            if (other.language != null)
+            if (other.ID != null)
                 return false;
         }
-        else if (!language.equals(other.language))
+        else if (!ID.equals(other.ID))
             return false;
         return true;
     }
 
 
-    public boolean deeplyEquals(Object obj)
+    public boolean deeplyEquals(DomainObject obj)
     {
         if (this == obj)
             return true;

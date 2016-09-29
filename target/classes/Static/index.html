@@ -4,18 +4,25 @@
 		<meta charset="ISO-8859-1">
 		<title>JSON Serialization Frameworks</title>
 		
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
-   		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
+		<script src="vendor/angular.min.js"></script>
+   		<script src="vendor/angular-ui-router.min.js"></script>
+   		
+   		<link href="vendor/bootstrap.min.css" rel="stylesheet">
 	
 
 		<script src="js/main.js"></script>
+		<script src="js/controllers/dashboard.js"></script>
 		<script src="js/controllers/framework-list.js"></script>
+		<script src="js/services/frameworksService.js"></script>
 		
-	</head>
+	</head>	
 	
 	<body>
 		<header>
-			<h1>Frameworks</h1>
+			<ul>
+				<li><a ui-sref="frameworks">Frameworks</a></li>
+				<li><a ui-sref="dashbaord">Dashboard</a></li>
+			</ul>
 		</header>
 		
 		<main ui-view></main>

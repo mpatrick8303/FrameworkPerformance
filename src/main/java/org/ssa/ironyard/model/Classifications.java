@@ -75,7 +75,7 @@ public class Classifications implements DomainObject
     }
 
 
-    public boolean deeplyEquals(Object obj)
+    public boolean deeplyEquals(DomainObject obj)
     {
         if (this == obj)
             return true;

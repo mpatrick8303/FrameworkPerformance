@@ -212,7 +212,19 @@ public class Framework implements DomainObject
 
 
     
+    public Object clone()
+    {
     
+            try
+            {
+                return super.clone();
+            }
+            catch (CloneNotSupportedException e)
+            {
+                return null;
+            }
+       
+    }
 
 
 
@@ -258,7 +270,7 @@ public class Framework implements DomainObject
 
 
 
-    public boolean deeplyEquals(Object obj)
+    public boolean deeplyEquals(DomainObject obj)
     {
         if (this == obj)
             return true;

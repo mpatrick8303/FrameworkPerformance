@@ -136,7 +136,7 @@ public class FrameworkServices implements FrameworkServicesInt
     @Override
     public List<Framework> displayFrameworks()
     {
-        return frame.readAll();
+        return frame.eagerReadAll();
     }
     
     

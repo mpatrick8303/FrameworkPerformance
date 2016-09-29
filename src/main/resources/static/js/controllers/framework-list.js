@@ -1,12 +1,11 @@
-angular
-	.module("framework")
-	.controller("FrameworkListController", FrameworkListCtrl)
+angular.module("framework").controller("FrameworkListController", FrameworkListCtrl)
 	
-FrameworkListCtrl.$inject = ['$http']
-function FrameworkListCtrl($http){
+FrameworkListCtrl.$inject = ['Frameworks']
+function FrameworkListCtrl(Frameworks){
 	var ctrl = this;
 	
-	$http.get("./frameworks").then(function(response){
-		ctrl.list = response.data;
+	Frameworks.all().then(function(frameworks){
+		ctrl.frameworks = frameworks;
 	});
+	ctrl.benchmarkName = 'framework';
 }

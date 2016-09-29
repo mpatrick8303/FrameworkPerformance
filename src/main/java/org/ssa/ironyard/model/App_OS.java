@@ -66,7 +66,7 @@ public class App_OS implements DomainObject
         return true;
     }
 
-    public boolean deeplyEquals(Object obj)
+    public boolean deeplyEquals(DomainObject obj)
     {
         if (this == obj)
             return true;
